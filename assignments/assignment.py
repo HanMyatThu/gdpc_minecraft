@@ -293,11 +293,10 @@ heightmap = editor.worldSlice.heightmaps["WORLD_SURFACE"]
 terrain_array = np.array(heightmap)
 
 plt.figure(figsize=(10, 6))
-plt.imshow(terrain_array, cmap="terrain", origin="lower")
+plt.imshow(terrain_array, cmap="terrain", origin="lower", aspect="auto")
 plt.scatter(x0, z0, color="red", marker="x", s=100, label="House Placement")
 plt.colorbar(label="Elevation (Blocks)")
 plt.title("Minecraft Terrain with House Placement")
 plt.xlabel("X Coordinate")
 plt.ylabel("Z Coordinate")
-plt.legend()
 plt.show()
